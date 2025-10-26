@@ -1,0 +1,136 @@
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# Package Files
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Gradle
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+package-lock.json
+yarn.lock
+
+# React
+/frontend/build
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDEs
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# Spring Boot
+spring-boot-*.log
+
+# Environment variables
+.env
+.env.production
+.env.staging
+
+# Docker
+docker-compose.override.yml
+
+# Kubernetes
+*.kubeconfig
+kubeconfig
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
+
+# AWS
+.aws/
+
+# Test coverage
+coverage/
+*.coverage
+htmlcov/
+
+# Generated files
+generated/
+*.generated.*
+
+# Secrets
+secrets/
+*.pem
+*.key
+*.crt
+
+# Logs
+logs/
+*.log.*
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# OS files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Reports
+reports/
+*.csv
+*.pdf
+
+# Cache
+.cache/
+*.cache
