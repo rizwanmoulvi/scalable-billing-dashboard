@@ -1,0 +1,31 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: analytics-service
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/billing_db}
+    username: ${SPRING_DATASOURCE_USERNAME:billing_user}
+    password: ${SPRING_DATASOURCE_PASSWORD:billing_pass}
+    hikari:
+      maximum-pool-size: 20
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  redis:
+    host: ${SPRING_REDIS_HOST:localhost}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics,prometheus
+
+analytics:
+  refresh:
+    schedule: "0 */15 * * * ?"  # Every 15 minutes
+
+logging:
+  level:
+    com.scalable.billing: INFO
