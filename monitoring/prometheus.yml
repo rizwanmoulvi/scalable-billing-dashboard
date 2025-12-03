@@ -1,0 +1,55 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  # Billing Service
+  - job_name: 'billing-service'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['billing-service:8080']
+        labels:
+          service: 'billing-service'
+          environment: 'local'
+
+  # Usage Processor
+  - job_name: 'usage-processor'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['usage-processor:8080']
+        labels:
+          service: 'usage-processor'
+          environment: 'local'
+
+  # Analytics Service
+  - job_name: 'analytics-service'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['analytics-service:8081']
+        labels:
+          service: 'analytics-service'
+          environment: 'local'
+
+  # PostgreSQL
+  - job_name: 'postgres'
+    static_configs:
+      - targets: ['postgres-exporter:9187']
+        labels:
+          service: 'postgresql'
+          environment: 'local'
+
+  # Redis
+  - job_name: 'redis'
+    static_configs:
+      - targets: ['redis-exporter:9121']
+        labels:
+          service: 'redis'
+          environment: 'local'
+
+  # Kafka
+  - job_name: 'kafka'
+    static_configs:
+      - targets: ['kafka-exporter:9308']
+        labels:
+          service: 'kafka'
+          environment: 'local'
